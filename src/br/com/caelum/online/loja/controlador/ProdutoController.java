@@ -2,6 +2,7 @@ package br.com.caelum.online.loja.controlador;
 
 import br.com.caelum.online.loja.dao.ProdutoDao;
 import br.com.caelum.online.loja.dominio.Produto;
+import br.com.caelum.online.loja.repositorio.RepositorioDeProdutos;
 import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.Resource;
@@ -14,12 +15,12 @@ import java.util.List;
 public class ProdutoController {
 
 
-    private final ProdutoDao produtos;
+    private final RepositorioDeProdutos produtos;
     private final Result result;
 
-    public ProdutoController(Result result) {
+    public ProdutoController(Result result, RepositorioDeProdutos produtos) {
         this.result = result;
-        this.produtos = new ProdutoDao();
+        this.produtos = produtos;
     }
 
     public List<Produto> lista(){
