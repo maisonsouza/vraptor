@@ -12,6 +12,8 @@
     <title>Lista de produtos</title>
 </head>
 <body>
+
+${mensagem}
 <table>
 <c:forEach var="produto" items="${produtoList}">
     <tr>
