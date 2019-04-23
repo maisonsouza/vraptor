@@ -3,6 +3,7 @@ package br.com.caelum.online.loja.controlador;
 import br.com.caelum.online.loja.dominio.UsuarioLogado;
 import br.com.caelum.vraptor.Resource;
 import br.com.caelum.vraptor.Result;
+import br.com.caelum.vraptor.Validator;
 
 @Resource
 public class LoginController {
