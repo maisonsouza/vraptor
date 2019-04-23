@@ -47,6 +47,11 @@ public class ProdutoController {
 
     }
 
+    public void remove(Produto produto){
+        produtos.remove(produto);
+        result.nothing();
+    }
+
     @Post
     public void adiciona(final Produto produto) {
         validator.checking(new Validations() {
